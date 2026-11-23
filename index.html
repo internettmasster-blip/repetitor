@@ -18,6 +18,79 @@
             margin: 0 auto;
             padding: 20px;
         }
+
+        /* Анимации для живой вставки */
+        @keyframes fadeSlideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes goldShimmer {
+            0% { left: -100%; }
+            25% { left: 120%; }
+            100% { left: 120%; }
+        }
+
+        /* Живая вставка для первого впечатления */
+        .author-banner {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+            border: 1px solid #F59E0B;
+            color: #78350F;
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+            animation: fadeSlideDown 0.8s ease-out forwards;
+        }
+
+        /* Световой блик, пробегающий по плашке */
+        .author-banner::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+            transform: skewX(-25deg);
+            animation: goldShimmer 6s infinite;
+            pointer-events: none;
+        }
+
+        .author-btn {
+            background-color: #D97706;
+            color: #FFFFFF;
+            padding: 7px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(217, 119, 6, 0.3);
+        }
+
+        .author-btn:hover {
+            background-color: #F59E0B;
+            color: #1F2937;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.5);
+        }
+
+        /* Остальные блоки сайта */
         .top-bar {
             background-color: #1E3A8A;
             color: #FFFFFF;
@@ -80,6 +153,10 @@
             text-decoration: none;
             font-weight: bold;
             margin-top: 10px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
         }
         .grid {
             display: grid;
@@ -146,6 +223,10 @@
                 width: 220px;
                 height: 260px;
             }
+            .author-banner {
+                justify-content: center;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -153,6 +234,12 @@
 
 <div class="wrap">
     
+    <!-- Живая авторская вставка -->
+    <div class="author-banner">
+        <span>✨ <strong>Литературный дизайн:</strong> сайт создан поэтом и писателем, автором притчи «Мнемосида»</span>
+        <a href="https://ramobinyah.art" target="_blank" class="author-btn">Познакомиться с автором →</a>
+    </div>
+
     <div class="top-bar">
         <span>Елена Смирнова | Репетитор</span>
         <a href="#contact">Записаться на урок</a>
@@ -217,24 +304,3 @@
                     <span>Марина (мама 9-классницы)</span>
                     <span class="badge-score">ОГЭ: 32 из 33 («5»)</span>
                 </div>
-                <p style="margin: 0; font-size: 14px; color: #4B5563;">«Дочь боялась даже начинать писать изложения. За полгода занятий появилась уверенность, оценки в школе выровнялись, экзамен сдали на пятёрку.»</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Контакты -->
-    <div class="contact-block" id="contact">
-        <h2>Запишитесь на диагностику знаний</h2>
-        <p>Первое занятие (30 минут) — бесплатно. Напишите мне в мессенджер:</p>
-        <a href="https://t.me" class="btn" style="background-color: #24A1DE;">Написать в Telegram</a>
-        <a href="https://wa.me" class="btn" style="background-color: #25D366; margin-left: 10px;">Написать в WhatsApp</a>
-    </div>
-
-    <div class="footer">
-        © 2026 Елена Смирнова — Репетитор по русскому языку
-    </div>
-
-</div>
-
-</body>
-</html>
