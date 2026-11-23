@@ -19,25 +19,12 @@
             padding: 20px;
         }
 
-        /* Анимации для живой вставки */
-        @keyframes fadeSlideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-15px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
+        /* Анимация живой вставки */
         @keyframes goldShimmer {
             0% { left: -100%; }
             25% { left: 120%; }
             100% { left: 120%; }
         }
-
-        /* Живая вставка для первого впечатления */
         .author-banner {
             position: relative;
             overflow: hidden;
@@ -51,13 +38,10 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 10px;
             font-size: 14px;
             box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
-            animation: fadeSlideDown 0.8s ease-out forwards;
         }
-
-        /* Световой блик, пробегающий по плашке */
         .author-banner::after {
             content: "";
             position: absolute;
@@ -65,12 +49,11 @@
             left: -100%;
             width: 50%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
             transform: skewX(-25deg);
-            animation: goldShimmer 6s infinite;
+            animation: goldShimmer 5s infinite;
             pointer-events: none;
         }
-
         .author-btn {
             background-color: #D97706;
             color: #FFFFFF;
@@ -79,26 +62,21 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 13px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(217, 119, 6, 0.3);
         }
-
         .author-btn:hover {
-            background-color: #F59E0B;
-            color: #1F2937;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.5);
+            background-color: #B45309;
         }
 
-        /* Остальные блоки сайта */
         .top-bar {
             background-color: #1E3A8A;
             color: #FFFFFF;
-            padding: 15px 25px;
+            padding: 15px 20px;
             border-radius: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
             margin-bottom: 30px;
         }
         .top-bar a {
@@ -106,24 +84,29 @@
             text-decoration: none;
             font-weight: bold;
         }
+        .top-contacts {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
         .hero-block {
             background-color: #FFFFFF;
             padding: 40px;
             border-radius: 12px;
             margin-bottom: 30px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        .hero-flex {
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 30px;
         }
-        .hero-text {
-            flex: 1;
-        }
         .hero-photo {
-            width: 260px;
-            height: 310px;
-            border-radius: 12px;
+            width: 240px;
+            height: 290px;
+            border-radius: 10px;
             overflow: hidden;
             flex-shrink: 0;
             background-color: #D1D5DB;
@@ -132,13 +115,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-        .section-block {
-            background-color: #FFFFFF;
-            padding: 35px 40px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
         }
         h1, h2, h3 {
             color: #1E3A8A;
@@ -152,11 +128,7 @@
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 10px;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-        .btn:hover {
-            transform: translateY(-2px);
+            margin: 5px;
         }
         .grid {
             display: grid;
@@ -176,26 +148,15 @@
             color: #1E3A8A;
             margin: 15px 0;
         }
-        .review-card {
-            background-color: #F9FAFB;
-            border: 1px solid #E5E7EB;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .review-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-            font-weight: bold;
-            color: #1E3A8A;
-        }
-        .badge-score {
+        .score-tag {
+            display: inline-block;
             background-color: #DCFCE7;
             color: #166534;
-            padding: 4px 8px;
+            padding: 3px 8px;
             border-radius: 6px;
             font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
         .contact-block {
             background-color: #1E3A8A;
@@ -203,27 +164,39 @@
             padding: 35px;
             border-radius: 12px;
             text-align: center;
+            margin-bottom: 20px;
         }
         .contact-block h2 {
             color: #FFFFFF;
         }
+        .phone-big {
+            display: block;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FBBF24;
+            text-decoration: none;
+            margin: 15px 0 20px;
+        }
         .footer {
-            text-align: center;
+            background-color: #FFFFFF;
             padding: 20px;
+            border-radius: 12px;
+            text-align: center;
             color: #4B5563;
             font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .footer a {
+            color: #1E3A8A;
+            font-weight: bold;
+            text-decoration: none;
         }
         @media (max-width: 700px) {
-            .hero-block {
+            .hero-flex {
                 flex-direction: column-reverse;
                 text-align: center;
-                padding: 25px;
             }
-            .hero-photo {
-                width: 220px;
-                height: 260px;
-            }
-            .author-banner {
+            .top-bar {
                 justify-content: center;
                 text-align: center;
             }
@@ -234,7 +207,6 @@
 
 <div class="wrap">
     
-    <!-- Живая авторская вставка -->
     <div class="author-banner">
         <span>✨ <strong>Литературный дизайн:</strong> сайт создан поэтом и писателем, автором притчи «Мнемосида»</span>
         <a href="https://ramobinyah.art" target="_blank" class="author-btn">Познакомиться с автором →</a>
@@ -242,12 +214,14 @@
 
     <div class="top-bar">
         <span>Елена Смирнова | Репетитор</span>
-        <a href="#contact">Записаться на урок</a>
+        <div class="top-contacts">
+            <a href="tel:+79990000000">📞 +7 (999) 000-00-00</a>
+            <a href="#contact" style="background-color: #D97706; padding: 6px 14px; border-radius: 6px;">Записаться</a>
+        </div>
     </div>
 
-    <!-- Первый экран с фото -->
-    <div class="hero-block">
-        <div class="hero-text">
+    <div class="hero-block hero-flex">
+        <div>
             <h1>Понятный русский язык без скучной зубрёжки</h1>
             <p>Индивидуальные онлайн-занятия для учеников 5–11 классов. Подготовка к ЕГЭ на 85+ баллов, ОГЭ на «5» и повышение школьной успеваемости.</p>
             <a href="#contact" class="btn">Записаться на бесплатный пробный урок</a>
@@ -257,7 +231,6 @@
         </div>
     </div>
 
-    <!-- Тарифы -->
     <div class="grid">
         <div class="card">
             <h3>5–8 классы</h3>
@@ -281,26 +254,40 @@
         </div>
     </div>
 
-    <!-- Обо мне -->
-    <div class="section-block">
+    <div class="hero-block">
         <h2>О преподавателе</h2>
-        <p>Дипломированный филолог (МГУ) с опытом работы 8 лет. Средний балл учеников на ЕГЭ — 87. Объясняю правила через логику и понятные схемы без зубрёжки. После каждого урока родители получают краткий отчёт об успехах ученика.</p>
+        <p>Дипломированный филолог (МГУ) с опытом работы 8 лет. Средний балл учеников на ЕГЭ — 87. Объясняю правила через логику и понятные схемы без зубрёжки.</p>
     </div>
 
-    <!-- Отзывы -->
-    <div class="section-block">
-        <h2>Результаты и отзывы учеников</h2>
-        <div class="grid" style="margin-bottom: 0;">
-            <div class="review-card">
-                <div class="review-top">
-                    <span>Артём К., 11 класс</span>
-                    <span class="badge-score">ЕГЭ: 94 балла</span>
-                </div>
-                <p style="margin: 0; font-size: 14px; color: #4B5563;">«Пришёл в сентябре с 52 баллами. Елена объяснила пунктуацию так, что я перестал ставить запятые наугад. Сочинение написал на максимум!»</p>
-            </div>
+    <div class="grid">
+        <div class="card">
+            <span class="score-tag">ЕГЭ: 94 балла</span>
+            <h3>Артём К., 11 класс</h3>
+            <p>«Пришёл в сентябре с 52 баллами. Елена объяснила пунктуацию так, что я перестал ставить запятые наугад. Сочинение написал на максимум!»</p>
+        </div>
 
-            <div class="review-card">
-                <div class="review-top">
-                    <span>Марина (мама 9-классницы)</span>
-                    <span class="badge-score">ОГЭ: 32 из 33 («5»)</span>
-                </div>
+        <div class="card">
+            <span class="score-tag">ОГЭ: 32 из 33 («5»)</span>
+            <h3>Марина (мама 9-классницы)</h3>
+            <p>«Дочь боялась даже начинать писать изложения. За полгода занятий появилась уверенность, оценки в школе выровнялись, экзамен сдали на пятёрку.»</p>
+        </div>
+    </div>
+
+    <div class="contact-block" id="contact">
+        <h2>Запишитесь на диагностику знаний</h2>
+        <p>Первое занятие (30 минут) — бесплатно. Позвоните мне или напишите в мессенджер:</p>
+        <a href="tel:+79990000000" class="phone-big">📞 +7 (999) 000-00-00</a>
+        <a href="https://t.me" class="btn" style="background-color: #24A1DE;">Написать в Telegram</a>
+        <a href="https://wa.me" class="btn" style="background-color: #25D366;">Написать в WhatsApp</a>
+        <a href="tel:+79990000000" class="btn" style="background-color: #D97706;">Позвонить</a>
+    </div>
+
+    <div class="footer">
+        © 2026 Елена Смирнова — Репетитор по русскому языку | Тел.: <a href="tel:+79990000000">+7 (999) 000-00-00</a><br>
+        Создание сайта: <a href="https://ramobinyah.art" target="_blank">Рамо Бин Ях</a>
+    </div>
+
+</div>
+
+</body>
+</html>
