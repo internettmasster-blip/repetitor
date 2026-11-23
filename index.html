@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Репетитор по русскому языку — Елена Смирнова</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #E5E7EB;
+            color: #1F2937;
+            line-height: 1.6;
+        }
+        .wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .top-bar {
+            background-color: #1E3A8A;
+            color: #FFFFFF;
+            padding: 15px 25px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .top-bar a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero-block {
+            background-color: #FFFFFF;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .hero-photo {
+            width: 260px;
+            height: 310px;
+            border-radius: 12px;
+            overflow: hidden;
+            flex-shrink: 0;
+            background-color: #D1D5DB;
+        }
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .section-block {
+            background-color: #FFFFFF;
+            padding: 35px 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        h1, h2, h3 {
+            color: #1E3A8A;
+            margin-top: 0;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #D97706;
+            color: #FFFFFF;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background-color: #FFFFFF;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1E3A8A;
+            margin: 15px 0;
+        }
+        .review-card {
+            background-color: #F9FAFB;
+            border: 1px solid #E5E7EB;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .review-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #1E3A8A;
+        }
+        .badge-score {
+            background-color: #DCFCE7;
+            color: #166534;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+        .contact-block {
+            background-color: #1E3A8A;
+            color: #FFFFFF;
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .contact-block h2 {
+            color: #FFFFFF;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #4B5563;
+            font-size: 14px;
+        }
+        @media (max-width: 700px) {
+            .hero-block {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 25px;
+            }
+            .hero-photo {
+                width: 220px;
+                height: 260px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrap">
+    
+    <div class="top-bar">
+        <span>Елена Смирнова | Репетитор</span>
+        <a href="#contact">Записаться на урок</a>
+    </div>
+
+    <!-- Первый экран с фото -->
+    <div class="hero-block">
+        <div class="hero-text">
+            <h1>Понятный русский язык без скучной зубрёжки</h1>
+            <p>Индивидуальные онлайн-занятия для учеников 5–11 классов. Подготовка к ЕГЭ на 85+ баллов, ОГЭ на «5» и повышение школьной успеваемости.</p>
+            <a href="#contact" class="btn">Записаться на бесплатный пробный урок</a>
+        </div>
+        <div class="hero-photo">
+            <img src="https://unsplash.com" alt="Фото репетитора">
+        </div>
+    </div>
+
+    <!-- Тарифы -->
+    <div class="grid">
+        <div class="card">
+            <h3>5–8 классы</h3>
+            <p>Закрытие пробелов по орфографии и пунктуации, помощь с домашними заданиями и ВПР.</p>
+            <div class="price">1 500 ₽ / 60 мин</div>
+            <a href="#contact" class="btn">Выбрать</a>
+        </div>
+
+        <div class="card">
+            <h3>Подготовка к ОГЭ (9 класс)</h3>
+            <p>Подготовка к итоговому собеседованию, тестам ФИПИ, сжатому изложению и сочинению.</p>
+            <div class="price">1 800 ₽ / 60 мин</div>
+            <a href="#contact" class="btn">Выбрать</a>
+        </div>
+
+        <div class="card">
+            <h3>Подготовка к ЕГЭ (10–11 классы)</h3>
+            <p>Разбор всех ловушек теста, подготовка к итоговому сочинению и сочинению ЕГЭ по критериям.</p>
+            <div class="price">2 200 ₽ / 60 мин</div>
+            <a href="#contact" class="btn">Выбрать</a>
+        </div>
+    </div>
+
+    <!-- Обо мне -->
+    <div class="section-block">
+        <h2>О преподавателе</h2>
+        <p>Дипломированный филолог (МГУ) с опытом работы 8 лет. Средний балл учеников на ЕГЭ — 87. Объясняю правила через логику и понятные схемы без зубрёжки. После каждого урока родители получают краткий отчёт об успехах ученика.</p>
+    </div>
+
+    <!-- Отзывы -->
+    <div class="section-block">
+        <h2>Результаты и отзывы учеников</h2>
+        <div class="grid" style="margin-bottom: 0;">
+            <div class="review-card">
+                <div class="review-top">
+                    <span>Артём К., 11 класс</span>
+                    <span class="badge-score">ЕГЭ: 94 балла</span>
+                </div>
+                <p style="margin: 0; font-size: 14px; color: #4B5563;">«Пришёл в сентябре с 52 баллами. Елена объяснила пунктуацию так, что я перестал ставить запятые наугад. Сочинение написал на максимум!»</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-top">
+                    <span>Марина (мама 9-классницы)</span>
+                    <span class="badge-score">ОГЭ: 32 из 33 («5»)</span>
+                </div>
+                <p style="margin: 0; font-size: 14px; color: #4B5563;">«Дочь боялась даже начинать писать изложения. За полгода занятий появилась уверенность, оценки в школе выровнялись, экзамен сдали на пятёрку.»</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Контакты -->
+    <div class="contact-block" id="contact">
+        <h2>Запишитесь на диагностику знаний</h2>
+        <p>Первое занятие (30 минут) — бесплатно. Напишите мне в мессенджер:</p>
+        <a href="https://t.me" class="btn" style="background-color: #24A1DE;">Написать в Telegram</a>
+        <a href="https://wa.me" class="btn" style="background-color: #25D366; margin-left: 10px;">Написать в WhatsApp</a>
+    </div>
+
+    <div class="footer">
+        © 2026 Елена Смирнова — Репетитор по русскому языку
+    </div>
+
+</div>
+
+</body>
+</html>
